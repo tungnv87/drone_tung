@@ -1,0 +1,6 @@
+{
+    "board": "arduino:renesas_uno:minima",
+    "port": "/dev/tty.usbmodem1434201",
+    "sketch": "YMFC-AL_Flight_controller/YMFC-AL_Flight_controller.ino",
+    "programmer": "rfp"
+}
