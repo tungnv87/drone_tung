@@ -3,7 +3,7 @@
 #include <RF24.h>
 
 // Define the CE and CSN pins for Arduino
-#define CE_PIN   9
+#define CE_PIN   3
 #define CSN_PIN  10
 
 // Create an RF24 object
@@ -15,7 +15,6 @@ const byte address[6] = "00001";
 void setup() {
     // Start the serial communication
     Serial.begin(9600);
-
     // Initialize the radio
     if (!radio.begin()) {
         Serial.println("NRF24L01 module not detected");
@@ -31,6 +30,8 @@ void setup() {
 }
 
 void loop() {
+
+    Serial.println("test loop___________: ");
     // Check if there is data available to read
     if (radio.available()) {
         char text[32] = {0}; // Buffer to store received data
